@@ -1,0 +1,14 @@
+body * {
+
+	border: 1px solid gray;
+}
+body div {
+	border-color: red;
+}
+
+body a {
+	background-color: yellow;
+}
+body iframe {
+	border: 1px solid blue;
+}
