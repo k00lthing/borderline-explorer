@@ -22,6 +22,7 @@ chrome.action.onClicked.addListener(async (tab) => {
 		  files: ["explorer-on.css"],
 		  target: { tabId: tab.id },
 		});
+	
 	  } else if (nextState === "OFF") {
 		// Remove the CSS file when the user turns the extension off
 		await chrome.scripting.removeCSS({

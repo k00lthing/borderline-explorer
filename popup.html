@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Color Picker Popup</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			padding: 20px;
+		}
+		.color-picker {
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Pick a Color</h1>
+	<input type="color" id="colorPicker" class="color-picker">
+	<script>
+		document.getElementById('colorPicker').addEventListener('input', function(event) {
+			const color = event.target.value;
+			console.log('Selected color:', color);
+			// You can add more functionality here to handle the selected color
+		});
+	</script>
+</body>
+</html>

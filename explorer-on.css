@@ -1,14 +1,22 @@
 body * {
-
-	border: 1px solid gray;
-}
-body div {
-	border-color: red;
+	box-sizing: border-box;
 }
 
-body a {
-	background-color: yellow;
+body div, body span{
+	border: 1px solid rgba(0 0 0 / .25);
 }
-body iframe {
+
+body img,
+body video,
+body audio{
+	border: 1px solid greenyellow;
+}
+
+body iframe, body html {
 	border: 1px solid blue;
+}
+
+body *:before,
+body *:after {
+	border-color: orchid;
 }
