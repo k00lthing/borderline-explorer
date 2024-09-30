@@ -1,22 +1,202 @@
+:root{
+	--flow-color: dimgray;
+	--non-semantic-color: gray;
+	--sectioning-color: royalblue;
+	--media-color: greenyellow;
+	--frames-color: blue;
+	--tables-color: coral;
+	--text-color: black;
+	--interactive-color: yellow;
+	--deprecated-color: red;
+	--pseudoelements-color: orchid;
+}
+
 body * {
 	box-sizing: border-box;
+	border: 1px dashed var(--flow-color);
 }
 
+/* Non-semantic elements */
 body div, body span{
-	border: 1px solid rgba(0 0 0 / .25);
+	border: 1px solid var(--non-semantic-color);
 }
 
+/* Sectioning elements */
+body article,
+body aside,
+body details,
+body dialog,
+body fieldset,
+body figure,
+body footer,
+body form,
+body header,
+body hgroup,
+body main,
+body menu,
+body nav,
+body noscript,
+body output,
+body search,
+body section,
+body summary,
+body meter,
+body progress{
+	border: 1px solid var(--sectioning-color);
+}
+
+/* Phrasing elements, text-related elements */
+body abbr,
+body address,
+body b,
+body bdi,
+body bdo,
+body blockquote,
+body br,
+body cite,
+body code,
+body data,
+body dd,
+body del,
+body dfn,
+body dl,
+body dt,
+body em,
+body figcaption,
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body hr,
+body i,
+body ins,
+body kbd,
+body label,
+body legend,
+body li,
+body mark,
+body ol,
+body p,
+body pre,
+body u,
+body ul,
+body q,
+body rp,
+body rt,
+body ruby,
+body s,
+body samp,
+body small,
+body strong,
+body sub,
+body sup,
+body time,
+body u,
+body var,
+body wbr{
+	border: 1px solid var(--text-color);
+}
+
+/* Media elements */
 body img,
+body svg,
 body video,
-body audio{
-	border: 1px solid greenyellow;
+body audio, 
+body canvas,
+body picture,
+body track{
+	border: 1px solid var(--media-color);
 }
 
-body iframe, body html {
-	border: 1px solid blue;
+/* Interactive elements */
+body a,
+body area,
+body button, 
+body datalist,
+body input,
+body optgroup,
+body option,
+body select,
+body textarea{
+	border: 1px solid var(--interactive-color);
 }
 
-body *:before,
-body *:after {
-	border-color: orchid;
+/* Embedded content, new browsing content */
+body iframe, 
+body html, 
+body embed, 
+body fencedframe,
+body object,
+body portal {
+	border: 1px solid var(--frames-color);
+}
+
+/* Tables and table-related */
+body caption,
+body col,
+body colgroup,
+body table,
+body tbody,
+body td,
+body tfoot,
+body th,
+body thead,
+body tr {
+	border: 1px solid var(--tables-color);
+}
+
+/* Deprecated */
+body acronym,
+body big,
+body center,
+body dir, 
+body font,
+body frame,
+body frameset,
+body marquee,
+body nobr,
+body noembed,
+body noframes, 
+body param,
+body plaintext,
+body rb,
+body rtc,
+body strike,
+body tt,
+body xmp{
+	border-color: var(--deprecated-color);
+
+}
+
+body *::before,
+body *::after {
+	border-color: var(--pesudoelements-color);
+}
+
+/* GUI Styles */
+#extension-gui{
+	position: fixed;
+	bottom: 0.25rem;
+	left: 0.25rem;
+	z-index: 999999999999;
+	background: black;
+	color: white;
+	cursor: move;
+	padding: 0.25rem;
+	font-size: .5rem;
+	border: none;
+	max-height: fit-content;
+}
+
+#extension-gui > div{
+	display: flex;
+	align-items: center;
+	gap: 0.25rem;
+	
+}
+#extension-gui *{
+	border: none;
+
 }
