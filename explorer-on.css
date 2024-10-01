@@ -2,18 +2,20 @@
 	--flow-color: dimgray;
 	--non-semantic-color: gray;
 	--sectioning-color: royalblue;
-	--media-color: greenyellow;
-	--frames-color: blue;
-	--tables-color: coral;
 	--text-color: black;
+	--media-color: greenyellow;
 	--interactive-color: yellow;
+	--embedded-color: blue;
+	--tables-color: coral;
 	--deprecated-color: red;
 	--pseudoelements-color: orchid;
 }
 
+/* Flow elemnts */
+
 body * {
 	box-sizing: border-box;
-	border: 1px dashed var(--flow-color);
+	border: 1px dotted var(--flow-color);
 }
 
 /* Non-semantic elements */
@@ -130,7 +132,7 @@ body embed,
 body fencedframe,
 body object,
 body portal {
-	border: 1px solid var(--frames-color);
+	border: 1px solid var(--embedded-color);
 }
 
 /* Tables and table-related */
@@ -170,8 +172,17 @@ body xmp{
 
 }
 
+/* Pseudo-elements */
 body *::before,
-body *::after {
+body *::after,
+body *::backdrop,
+body *::cue,
+body *::first-letter,
+body *::file-selector-button,
+body *::first-line,
+body *::grammar-error,
+body *::placeholder,
+body *::target-text{
 	border-color: var(--pesudoelements-color);
 }
 
@@ -182,21 +193,33 @@ body *::after {
 	left: 0.25rem;
 	z-index: 999999999999;
 	background: black;
-	color: white;
 	cursor: move;
 	padding: 0.25rem;
-	font-size: .5rem;
 	border: none;
 	max-height: fit-content;
+}
+
+#extension-gui *{
+	border: none;
 }
 
 #extension-gui > div{
 	display: flex;
 	align-items: center;
 	gap: 0.25rem;
-	
 }
-#extension-gui *{
-	border: none;
 
+#extension-gui > div > input{
+	margin: 0;
+	padding: 0;
+}
+
+#extension-gui > div > label{
+	margin: 0;
+	padding: 0;
+	color: white;
+	text-transform: none;
+	font-family: monospace;
+	font-size: .5rem;
+	line-height: 1;
 }
